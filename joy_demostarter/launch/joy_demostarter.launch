@@ -1,0 +1,6 @@
+<launch>
+    <arg name="frame_id" default="/joy_demostarter"/>
+    <node pkg="joy_demostarter" type="joy_demostarter_node.py" name="joy_demostarter" output="screen" >
+        <param name="frame_id" value="$(arg frame_id)"/>
+    </node>
+</launch>
