@@ -1,0 +1,16 @@
+[Unit]
+Description=BlinkStick Driver
+#After=network.target
+
+[Service]
+Type=fork
+ExecStart=/opt/blinkstick_driver/blinkstick_driver.sh
+#ExecStop=...                                     
+StandardOutput=journal
+Restart=on-failure
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+
+

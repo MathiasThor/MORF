@@ -1,0 +1,16 @@
+[Unit]
+Description=Joystick Highlevel Control
+#After=network.target
+
+[Service]
+Type=fork
+ExecStart=/opt/joystick/joystik_highlevel_control.sh
+#ExecStop=...                                     
+StandardOutput=journal
+Restart=on-failure
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
+
+

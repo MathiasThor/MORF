@@ -1,0 +1,14 @@
+[Unit]
+Description=ROS JoyStick
+#After=network.target
+
+[Service]
+Type=fork
+ExecStart=/opt/joystick/ros-joy.sh       
+#ExecStop=...                                     
+StandardOutput=journal
+Restart=on-failure
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target

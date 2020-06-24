@@ -1,0 +1,13 @@
+[Unit]
+Description=Setup usb_latency
+#After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/opt/usb_latency/setup-usb_latency.sh
+RemainAfterExit=true
+ExecStop=/opt/usb_latency/teardown-usb_latency.sh
+StandardOutput=journal
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,13 @@
+[Unit]
+Description=Dynamixel Driver
+#After=network.target
+
+[Service]
+Type=fork
+ExecStart=/opt/dynamixel_driver/dynamixel_driver.sh       
+#ExecStop=...                                     
+StandardOutput=journal
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target

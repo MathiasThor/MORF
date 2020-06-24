@@ -1,0 +1,13 @@
+[Unit]
+Description=MORF Controller
+#After=network.target
+
+[Service]
+Type=fork
+ExecStart=/opt/morf_controller/morf-controller.sh       
+#ExecStop=...                                     
+StandardOutput=journal
+KillMode=process
+
+[Install]
+WantedBy=multi-user.target
