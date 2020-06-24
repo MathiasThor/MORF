@@ -1,2 +1,2 @@
 # MORF
-See [Wiki pages!](https://https://github.com/MathiasThor/MORF/wiki)
+See [Wiki pages!](https://github.com/MathiasThor/MORF/wiki)
